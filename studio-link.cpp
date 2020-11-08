@@ -122,8 +122,8 @@ void vstplugin::processReplacing(float** inputs, float** outputs, VstInt32 sampl
 	float *input1 = inputs[1];
 	float *output1 = outputs[1];
 
-	effect_src(sess, input0, input1, sampleFrames);
 	effect_play(sess, output0, output1, sampleFrames);
+	effect_src(sess, input0, input1, sampleFrames);
 	effect_bypass(sess, output0, output1,
 			input0, input1, sampleFrames);
 
