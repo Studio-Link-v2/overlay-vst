@@ -1,3 +1,3 @@
 all: studio-link.cpp studio-link.h
 	$(CC) -fPIC -Wall -shared -o studio-link.so studio-link.cpp vstsdk2.4/public.sdk/source/vst2.x/audioeffect.cpp vstsdk2.4/public.sdk/source/vst2.x/audioeffectx.cpp vstsdk2.4/public.sdk/source/vst2.x/vstplugmain.cpp -I vstsdk2.4/public.sdk/source/vst2.x/ -I vstsdk2.4/ -I ../my_include  ../baresip/libbaresip.a \
-		    ../re/libre.a ../rem/librem.a -L ../opus -L ../openssl -lssl -lcrypto -lopus -lpthread
+		    ../re/libre.a ../rem/librem.a -L ../3rdparty/lib -lssl -lcrypto -lopus -lpthread
